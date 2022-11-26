@@ -13,12 +13,12 @@ def move(x, y):
 
 def waitloop():
     while True:
+        move(0, os.get_terminal_size()[0])
+        print("\r     ", end="")
         if k.is_pressed("x"):
             return True
         elif k.is_pressed("m"):
             return False
-        else:
-            print("\r     ", end="")
 
 def customcol(color):
     return f"\033[38;5;{color}m"
