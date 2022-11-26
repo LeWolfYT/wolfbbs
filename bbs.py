@@ -141,8 +141,8 @@ def main():
     makewin(True)
     options = [f"\033[1mC\033[0m{customcol(231)}lock",
                f"\033[1mW\033[0m{customcol(231)}eather",
-               f"\033[1mB\033[0m{customcol(231)}ulletin",
-               f"C\033[1mo\033[0m{customcol(231)}mmands"]
+               f"\033[1mB\033[0m{customcol(231)}ulletin"]#,
+               #f"C\033[1mo\033[0m{customcol(231)}mmands"]
     print()
     multiprint(*options)
 
@@ -169,12 +169,12 @@ while True:
             break
         else:
             main()
-    elif k.is_pressed("o"):
-        title = "Commands"
-        if commands(fig):
-            break
-        else:
-            main()
+    #elif k.is_pressed("o"):
+    #    title = "Commands"
+    #    if commands(fig):
+    #        break
+    #    else:
+    #        main()
     elif k.is_pressed("x"):
         break
 clear()
